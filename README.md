@@ -5,4 +5,4 @@ playground for RUST 🦀
 * Rust's ownership rules are soo much like pessimistic locking !
   Creating a mutable reference is like grabbing hold of the lock (to the memory). 
   Post that no references (either mutable or immutable) can be created until the lifetime of the first mutable reference.
-* 
+* Calling join on the handle blocks the thread currently running until the thread represented by the handle terminates 
