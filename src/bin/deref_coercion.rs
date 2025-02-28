@@ -8,7 +8,7 @@ fn main() {
     test_deref_coercion(&mybox);
 }
 
-fn test_deref_coercion(x : &String) {
+fn test_deref_coercion(x: &String) {
     println!("{}", x);
 }
 
@@ -26,7 +26,7 @@ impl<T> MyBox<T> {
 // implement deref trait for MyBox
 impl<T> Deref for MyBox<T> {
     // associated property
-    type Target =  T;
+    type Target = T;
     // takes a immutable reference to self
     // and returns type T
     // notice Self vs self
@@ -35,5 +35,3 @@ impl<T> Deref for MyBox<T> {
         &self.0
     }
 }
-
-
