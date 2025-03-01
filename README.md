@@ -10,3 +10,5 @@ playground for RUST 🦀
   * Rust will then automatically dereference a type - when there is mismatch in a function
   * test_deref_coercion(&mybox); fn test_deref_coercion(x : &String)
   * dereference of mybox returns a reference to a string. So Rust automatically does that for you !
+* also auto-dereferencing of references in rust happens when you use the dot operator with the reference (function call, data access)
+  * lets say reference r points to a struct. That struct has a function foo. There is no need to do *r.foo. r.foo works. foo can also be data access
