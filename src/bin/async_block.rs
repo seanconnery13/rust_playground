@@ -1,7 +1,7 @@
 #[tokio::main]
 async fn main() {
     let fut1 = async {
-       println!("first async block");
+        println!("first async block");
         tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
     };
     let fut2 = async {
