@@ -12,3 +12,8 @@ playground for RUST 🦀
   * dereference of mybox returns a reference to a string. So Rust automatically does that for you !
 * also auto-dereferencing of references in rust happens when you use the dot operator with the reference (function call, data access)
   * lets say reference r points to a struct. That struct has a function foo. There is no need to do *r.foo. r.foo works. foo can also be data access
+* very important article on how to use mutexes in rust - https://draft.ryhl.io/blog/shared-mutable-state/
+  * golden rule: never allow swapping out before unlocking the mutex
+  * in another words - never call .await before unlocking the mutex
+  * as another thread can then try to lock the same mutex and as that is not an .await call - it will wait forever. Deadlock !
+  
